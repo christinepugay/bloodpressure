@@ -1,6 +1,6 @@
 # [Charting Blood Pressure to Support Physician Diagnosis using Excel](https://github.com/christinepugay/bloodpressure/tree/main)
 
-Here, we are creating a medical charting system that records a patient's blood pressure (BP) results and simultaniously analyzes the results overtime. This will allow physicians to easily track the patients BP results to see any changes in the patients condition.
+In this project, I created a medical charting system that records a patient's blood pressure (BP) results and simultaniously analyzes the results overtime. This will allow physicians to easily track the patients BP results to see any changes in the patients condition.
 
 With the patient's approval, we collected the data from a patient who undergone coronay artery bypass grafting and mitral valve repair in June 2020. He/She was advised to take, monitor, and record his/her blood pressure results after the surgery was performed. The dataset consists of the patient's blood pressure results from August 2020 to August 2022.
 
@@ -17,10 +17,11 @@ To categorize each record, I followed the American Heart Association's chart as 
 
 ![](bp_levels.PNG)
 
-To translate this chart onto Excel, I used IF, AND, OR functions. Here is the snippet of the function that I use:
+Similarly, I categorized each records in the dataset as Normal, Elevated, Stage 1: Hypertension, Stage 2:Hypertension, or Hypertensive Crisis.
+
+To translate this chart onto Excel, I used IF, AND, OR functions. Here is the snippet of the function that I use to get the Systolic & Diastolic Results column:
 
 =IF(AND('BloodPressure Chart'!$C282 < 120,'BloodPressure Chart'!$D282 < 80),"Normal", IF(AND('BloodPressure Chart'!$C282>=120,'BloodPressure Chart'!$C282<=129, 'BloodPressure Chart'!$D282<80),"Elevated", IF(AND('BloodPressure Chart'!$C282>= 130,'BloodPressure Chart'!$C282<=139), "Stage 1: Hypertension", IF(AND('BloodPressure Chart'!$D282>=80,'BloodPressure Chart'!$D282<=89), "Stage 1: Hypertension", IF(AND('BloodPressure Chart'!$C282>=140,'BloodPressure Chart'!$C282<180),"Stage 2: Hypertension", IF(AND('BloodPressure Chart'!$D282>=90,'BloodPressure Chart'!$D282<= 120),"Stage 2: Hypertension", IF(OR('BloodPressure Chart'!$C282>180, 'BloodPressure Chart'!$D282>120), "Hypertensive Crisis","")))))))
-
 
 ## Overview of the BP Chart
 ![](overview_chart.PNG)
