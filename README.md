@@ -13,13 +13,22 @@ Here are some data cleaning procedures that I performed to this dataset:
 - There were three records in the dataset where the patient did not write down the heart rate, I also got rid of these records.
   
 # Charting the Data
+To categorize each record, I followed the American Heart Association's chart as my guideline.
+
+![](bp_levels.PNG)
+
+To translate this chart onto Excel, I used IF, AND, OR functions. Here is the snippet of the function that I use:
+
+=IF(AND('BloodPressure Chart'!$C282 < 120,'BloodPressure Chart'!$D282 < 80),"Normal", IF(AND('BloodPressure Chart'!$C282>=120,'BloodPressure Chart'!$C282<=129, 'BloodPressure Chart'!$D282<80),"Elevated", IF(AND('BloodPressure Chart'!$C282>= 130,'BloodPressure Chart'!$C282<=139), "Stage 1: Hypertension", IF(AND('BloodPressure Chart'!$D282>=80,'BloodPressure Chart'!$D282<=89), "Stage 1: Hypertension", IF(AND('BloodPressure Chart'!$C282>=140,'BloodPressure Chart'!$C282<180),"Stage 2: Hypertension", IF(AND('BloodPressure Chart'!$D282>=90,'BloodPressure Chart'!$D282<= 120),"Stage 2: Hypertension", IF(OR('BloodPressure Chart'!$C282>180, 'BloodPressure Chart'!$D282>120), "Hypertensive Crisis","")))))))
 
 
 ## Overview of the BP Chart
 ![](overview_chart.PNG)
 
-## Filtering Demo
-Using  the drop-down arrow on the column names, physicians can filter the data to only view certain records. 
+## Filtering the Chart
+Using the drop-down arrow on the column names, physicians can filter the data to only view certain records. 
+
+### Filtering Demo
 
 Let's only view  records with Stage 2: Hypertension as a result
 
@@ -27,10 +36,12 @@ Click on the drop down arrow on the "Systolic & Diastolic Results" column
 
 ![](demo_1.PNG)
 
-Unclick "Select All" box to unselect all the records, then click on "Stage 2: Hypertension". This will only return all patient's records with Stage 2: Hypertension as a result.  
+Unclick "Select All" box to unselect all the records, then click on "Stage 2: Hypertension". This will only return all patient's records with Stage 2: Hypertension as a result. 
+
 ![](demo_2.PNG)
 
 Here are the results!
+
 ![](demo_3.PNG)
 
 
