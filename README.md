@@ -18,6 +18,19 @@ Here are some data cleaning procedures that I performed to this dataset:
 ## Overview of the BP Chart
 ![](overview_chart.PNG)
 
+## Filtering Demo
+Using  the drop-down arrow on the column names, physicians can filter the data to only view certain records. 
+
+Let's only view  records with Stage 2: Hypertension as a result
+![](demo_1.PNG)
+
+![](demo_2.PNG)
+
+![](demo_3.PNG)
+
+
+
+
 
 
   
