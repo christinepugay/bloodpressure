@@ -22,10 +22,15 @@ Here are some data cleaning procedures that I performed to this dataset:
 Using  the drop-down arrow on the column names, physicians can filter the data to only view certain records. 
 
 Let's only view  records with Stage 2: Hypertension as a result
+
+Click on the drop down arrow on the "Systolic & Diastolic Results" column
+
 ![](demo_1.PNG)
 
+Unclick "Select All" box to unselect all the records, then click on "Stage 2: Hypertension". This will only return all patient's records with Stage 2: Hypertension as a result.  
 ![](demo_2.PNG)
 
+Here are the results!
 ![](demo_3.PNG)
 
 
